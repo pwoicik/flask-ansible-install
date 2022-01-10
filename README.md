@@ -10,7 +10,7 @@
 
 ## How it works
 `setup.yaml` downloads all required dependecies (pip, git, nginx).
-It then clones git repository provided in `APP_REPO` variable. In the next step a new user is created to run your application. After that it creates a python virtual environment and installs dependencies of your Flask app. Your application is run through a systemd service. Remember to set correct name of your application in `APP_NAME` variable otherwise this service won't be able to start.
+It then clones git repository provided in `APP_REPO` variable. In the next step a new user is created to run your application. After that it creates a python virtual environment and installs dependencies of your Flask app. Your application is run through a systemd service on port 8080. Remember to set correct name of your application in `APP_NAME` variable otherwise this service won't be able to start.
 
 `setup.yaml` also creates a proxy server using nginx. Server is listening on port 80 and forwards all HTTP request to the ip provided in `app_ids` variable.
 
